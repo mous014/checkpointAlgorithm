@@ -1,0 +1,29 @@
+BEGIN
+    var endWithPeriod = false
+    var sentenceLength = 0
+    var wordCount = 0
+    var vowelCount = 0
+    BEGIN
+        for each character in the sentence
+            sentenceLength = sentenceLength + 1
+            if character is a space then
+                wordCount = wordCount + 1
+            end if
+            if character is a vowel then
+                vowelCount = vowelCount + 1
+            end if
+            if character is a period then
+                endWithPeriod = true
+            end if
+        end for
+    END
+    if endWithPeriod = true then
+        print "ends with period"
+    end if
+    if endWithPeriod = false then
+        print "does not end with period"
+    end if
+    print "Sentence Length: " + sentenceLength
+    print "Word Count: " + wordCount
+    print "Vowel Count: " + vowelCount
+END
